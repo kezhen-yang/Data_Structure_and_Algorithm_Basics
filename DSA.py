@@ -979,6 +979,27 @@ class GraphNode:
 ############################ Matrix DFS ################################
 ########################################################################
 
+"""
+Depth First Search (DFS) is one of the most common algorithms in coding interviews. It is commonly used to traverse trees and graphs. In this lesson we will focus on trees.
+
+If we want to traverse an entire tree, we have to visit every node. One way to accomplish this is by using depth-first search.
+
+The idea is we pick a direction, say left, and keep following pointers as far down left as we can go until we reach null. Once we reach null, we backtrack to the parent node and then go right. We keep doing this until we have visited every node in the tree. This is the essence of depth-first search.
+
+As the name implies, we go as deep as possible before we backtrack.
+
+There are three ways to traverse a tree using depth-first search:
+
+Inorder
+Preorder
+Postorder
+
+Depth first search is best implemented using recursion, although it is possible to implement it iteratively using a stack.
+
+An inorder traversal will recursively visit all the nodes in the left subtree, then visit the parent node and finally visit all the nodes in the right subtree. In this case, "visit" could mean anything from printing the node to performing some operation on it.
+
+"""
+
 # Matrix (2D Grid)
 grid = [[0, 0, 0, 0],
         [1, 1, 0, 0],
