@@ -14,7 +14,7 @@ Recall that a byte is made up of 8-bits, and bit is the smallest unit of measure
 You might have come across the terms: HDD and SDD. Hard disk drives (HDD) and Solid-state drive (SSD) are both persistent storage devices, with the latter one being more popular and faster. However, it does generally cost a bit more.
 
 HDDs are mechanical, and have a read/write head. The older they get, the more wear and tear they collect which slows them down overtime. SSDs are significantly faster because they do not have moving parts, and rely on reading and writing data electronically (similar to RAM).
-image
+
 
 RAM
 Random Access Memory is also used for storing information but is typically a lot smaller in size compared to disk drives. RAM sizes generally vary from 1GB - 128GB because RAM is much more expensive than disk space. The benefit is that reading and writing to RAM is significantly faster than disk. For instance, writing 1 MB of data to RAM might take on the order of microseconds (millionths of a second, or 1/10^6 seconds), while writing the same amount to a disk might take on the order of milliseconds (thousandths of a second, or 1/10^3 seconds)."
@@ -24,7 +24,7 @@ RAM keeps the applications you have open in memory, include any variables your p
 
 It is important to note that the RAM and disk do not directly communicate with each other. They rely on the CPU to facilitate data transfer between them.
 
-image
+
 
 CPU
 The central processing unit (CPU) is the intermediary between the RAM and disk. Also referred to as the "brain" of the computer; it reads/writes from the RAM and disk(s).
@@ -35,25 +35,25 @@ All computations are done within the CPU, such as addition/subtraction/multiplic
 
 The CPU also consists of a cache. A cache is extremely fast memory that lies on the same die as the CPU.
 
-image
+
 
 Caches
 Most CPUs have an L1, L2, and L3 cache, which are physical components that are much faster than RAM, but they only stores data on the order of KBs or tens of MBs.
 
 Whenever a read operation is requested, the cache is checked before the RAM and the disk. If the data requested is in the cache, and is unchanged since the last time it was accessed, it will be fetched from the cache, and not the RAM. Reading and writing to the cache is a lot faster than RAM and disk. It is up to the operating system to decide what gets stored in the cache.
 
-Caching is an important concept applied in many areas beyond computer architecture. For example, web browsers use cache to keep track of frequently accessed web pages to load them faster. This stored data might include HTML, CSS, JavaScript, and images, among other things. If the data is still valid from the time the page was cached, it will load faster. But in this case, the browser is using the disk as cache, because making internet requests is a lot slower than reading from disk.
+Caching is an important concept applied in many areas beyond computer architecture. For example, web browsers use cache to keep track of frequently accessed web pages to load them faster. This stored data might include HTML, CSS, JavaScript, and s, among other things. If the data is still valid from the time the page was cached, it will load faster. But in this case, the browser is using the disk as cache, because making internet requests is a lot slower than reading from disk.
 
-image
+
 
 The cache being part of the CPU is only part of the reason why it is faster than RAM. Cache is what's known as SRAM. If you are interested, you might view this resource from MIT, which gives a gentle introduction.
-image
+
 
 The visual above demonstrates how the CPU, RAM, Cache, and the disk interact with each other on an abstract level.
 Moore's Law
 Moore's Law is an observation, which suggests that the number of transistors in a CPU double every two years. Looking at the visual below, it looks like a linear graph, but looking at the scale on the y-axis explains that it is exponential. So while the number of transistors doubles, the cost of computers tends to halve. In the recent years however, the number of transistors, and thus the speed of the computers, has begun to plateau.
 
-image
+
 
 Closing Notes
 All three memory types have their own use. If you are writing an essay, and the computer were to shut down, you would want it stored on a disk drive. While multi-tasking, you would want the programs opened to be stored in the RAM.
@@ -98,7 +98,7 @@ This gives developers insight into how the requests went, if any errors occured,
 Alerts
 As developers, we wouldn't want to keep checking metrics to see if any unexpected behavior exhibits itself. This would be like checking your phone every 5 minutes for a notification. It is more ideal to receive a push notification. We can program alerts so that whenever a certain metric fails to meet the target, the developers receive a push notification. For example, if 100% of the user requests receive successful responses, we could set an alert to be notified if this metric dips under 95%.
 
-image
+
 
 The visual above demonstrates (on a very high level) how the components interact with each other, and what components the users interacts with and what components the developer interacts with.
 Closing Notes
@@ -161,8 +161,8 @@ In this case, the second server is simply a backup. But, what if we had two serv
 Note: In most cases, by redundancy we mean active-active redundancy (except for the example below).
 
 The visuals below demonstrate a normal request with a successful response and what happens when there is a DDoS (distributed denial of service) attack. Notice that only one intended user gets the response back. In cases like this, server 2 will come into play. But it will also become overloaded, so redundancy is not a perfect solution.
-image
-image
+
+
 
 Throughput
 Throughput refers to the amount of data or operations we can handle over some period of time. The throughput of a client making requests to a server would be measured through the number of requests per second. If we want to improve the throughput, we can perform vertical scaling. This makes sense, but as we discussed earlier, there are limitations to vertical scaling. This is where horizontal scaling would come in.
@@ -173,16 +173,16 @@ Queries per second makes more sense when we are discussing design in terms of us
 
 The visuals below demonstrate two ways in which throughput may be increased.
 
-image
+
 
 Horizontal scaling allows more requests to be handled by multiple servers.
-image
+
 
 Vertical scaling allows more requests to be handled by a single server.
 Latency
 Latency refers to the delay between the client making the request and the server responding to that request. So, while throughput refers to how many requests can be sent over a network per second, latency refers to the amount of time it takes for each individual request to be completed. Latency is not exclusive to networks, however. Recall that latency even exists within a computer's internal components, such as the RAM and the cache making requests from the CPU.
 
-image
+
 
 Round trip latency for a user making a request.
 Closing Notes
